@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet');
+
+$main01: #022B42;
+$main02: #51A3D3;
+$main03: #FF7987;
+
+.main02 {
+    color: $main02;
+}
+
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin background-img {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.font175 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.font125 {
+    font-size: 1.25rem;
+}
+
+.btn-pink {
+    color: #fff;
+    background: $main03;
+    border: $main03;
+    border-radius: 50px;
+    padding: .25rem 1.25rem;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    &:hover {
+        color: #fff;
+        background: darken($main03, 5%);
+        border: darken($main03, 8%);
+    }
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $main01;
+    font-family: "Montserrat", "Noto Sans TC", sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.title-bar {
+    .title {
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        line-height: 56px;
+    }
+    .bar-icon {
+        width: 56px;
+        height: 56px;
+        @include flex_center;
+    }
+}
+
+.game-bg {
+    background-image: url("../images/mission_bg.svg");
+    @include background-img;
+    height: calc(100vh - 56px);
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+
+    //登入
+    .img-planet {
+        position: absolute;
+        width: 200px;
+        right: -70px;
+        bottom: 126px;
+    }
+    input::placeholder {
+        color: #a5a5a5;
+    }
+}
+
+//歡迎 02_welcome.html
+.swiper-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white; 
+    .loading {
+        width: 60%;
+        margin-bottom: 1.75rem;
+    }
+    .introduce {
+        background-image: url("../images/introduce_bg.svg");
+        @include background-img;
+        background-size: contain;
+    }
+    .notice {
+        border: 1px solid #BB0031;
+        background-color: rgba(187, 0, 49, 0.4);
+        padding: 1rem;
+        border-radius: 20px;
+        margin: 3rem 2rem 1rem 2rem;
+    }
+    .swiper-pagination-bullet {
+        border: 2px solid $main02;
+        background-color: transparent;
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        &-active {
+            width: 40px;
+            border-radius: 10px;
+            background-color: $main02;
+        }
+    }
+}
