@@ -155,7 +155,7 @@ body {
   border: 1px solid #51A3D3;
   background-color: rgba(0, 73, 115, 0.9);
   color: white;
-  padding: 1rem 1.5rem 2rem 1.5rem;
+  padding: 1rem 1.5rem 1.75rem 1.5rem;
 }
 
 .modal-content .swiper-container {
@@ -225,7 +225,7 @@ body {
 
 .swiper-container .loading {
   width: 60%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .swiper-container .introduce {
@@ -350,7 +350,7 @@ body {
 .btn-complete {
   position: absolute;
   top: 14px;
-  right: 0;
+  right: 15px;
   z-index: 5;
   color: #fff;
   background-color: #0074A2;
@@ -394,19 +394,25 @@ body {
 }
 
 .leaderboard table tbody tr {
-  border-left: 2px solid #51A3D3;
   background: -webkit-gradient(linear, left top, right top, from(rgba(81, 163, 211, 0.5)), to(rgba(81, 163, 211, 0)));
   background: linear-gradient(90deg, rgba(81, 163, 211, 0.5) 0%, rgba(81, 163, 211, 0) 100%);
 }
 
 .leaderboard table tbody tr.me {
-  border-left: 2px solid #FF99A6;
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 121, 135, 0.5)), to(rgba(255, 121, 135, 0)));
   background: linear-gradient(90deg, rgba(255, 121, 135, 0.5) 0%, rgba(255, 121, 135, 0) 100%);
 }
 
+.leaderboard table tbody tr.me th {
+  border-left: 2px solid #FF99A6;
+}
+
+.leaderboard table tbody tr th {
+  border-left: 2px solid #51A3D3;
+}
+
 .leaderboard table tbody tr th, .leaderboard table tbody tr td {
-  border-bottom: 3px solid #022B42;
+  border-bottom: 3px solid #163953;
   padding-top: .25rem;
   padding-bottom: .25rem;
   position: relative;
@@ -415,7 +421,7 @@ body {
 .leaderboard table tbody tr th .crown, .leaderboard table tbody tr td .crown {
   position: absolute;
   right: 0;
-  top: -3px;
+  top: -4px;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
 }
@@ -454,9 +460,12 @@ body {
 }
 
 .my-score table tbody tr {
-  border-left: 2px solid #FF99A6;
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 121, 135, 0.5)), to(rgba(255, 121, 135, 0)));
   background: linear-gradient(90deg, rgba(255, 121, 135, 0.5) 0%, rgba(255, 121, 135, 0) 100%);
+}
+
+.my-score table tbody tr th {
+  border-left: 2px solid #FF99A6;
 }
 
 .my-score table tbody tr th, .my-score table tbody tr td {
@@ -477,7 +486,7 @@ body {
 .page-introduce {
   text-align: center;
   color: white;
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 .page-introduce .introduce {
