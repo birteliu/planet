@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOPCON 大地遊戲</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Title Bar -->
+    <div class="container-fluid title-bar">
+        <div class="row">
+            <div class="col-auto bar-icon">
+                <button class="btn" onclick="location.href='index.html';"><img src="images/ic_back.svg" alt=""></button>
+            </div>
+            <div class="col">
+                <div class="title">排行榜</div>
+            </div>
+            <div class="col-auto bar-icon">
+            </div>
+        </div>
+    </div>
+
+    <!-- 破關證明 -->
+    <button class="btn btn-complete" data-bs-toggle="modal" data-bs-target="#uncomplete">破關證明</button>
+
+    <!-- 排行榜 -->
+    <div class="container mt-2">
+        <div class="leaderboard">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">排名</th>
+                    <th scope="col">暱稱</th>
+                    <th scope="col"></th>
+                    <th scope="col" class="point">累積分數</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1st</th>
+                    <td>QZWSXC #005</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">60000pt
+                        <img src="images/ic_crown.svg" class="crown" alt="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1st</th>
+                    <td>QZWSXC #005</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">60000pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2nd</th>
+                    <td>最多六個字元 #005</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">58000pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3rd</th>
+                    <td>QZWSXC #005</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">24000pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3rd</th>
+                    <td>QZWSXC #005</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">24000pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">004</th>
+                    <td>QZWSXC #005</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">24000pt</td>
+                  </tr>
+                  <tr class="me">
+                    <th scope="row">005</th>
+                    <td>QZWSXC #005</td>
+                    <td class="line"><img src="images/img_linepink.svg" alt=""></td>
+                    <td class="point">24000pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">006</th>
+                    <td>QZWSXC #005</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">24000pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">007</th>
+                    <td>QZWSXC #005</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">24000pt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">008</th>
+                    <td>-</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">009</th>
+                    <td>-</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">010</th>
+                    <td>-</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">011</th>
+                    <td>-</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">012</th>
+                    <td>-</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">013</th>
+                    <td>-</td>
+                    <td class="line"><img src="images/img_lineblue.svg" alt=""></td>
+                    <td class="point">-</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="my-score">
+            <img src="images/img_score_decoration.svg" class="decoration" alt="">
+            <div class="text-white fw-bold mb-1">我的名次</div>
+            <table class="table">
+                <tbody>
+                  <tr>
+                    <th scope="row">1st</th>
+                    <td>QZWSXC #005</td>
+                    <td class="line"><img src="images/img_linepink.svg" alt=""></td>
+                    <td class="point">60000pt</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 燈箱:尚未破關 uncomplete -->
+    <div class="modal fade" id="uncomplete" tabindex="-1" aria-labelledby="uncompleteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn text-end p-0" data-bs-dismiss="modal" aria-label="Close"><img src="images/ic_close.svg" alt=""></button>
+                <div class="text-center">
+                    <div class="font175 mb-3">尚未破關</div>
+                    <div>請繼續努力完成任務～</div>
+                    <button class="btn btn-pink mt-3 px-5" data-bs-dismiss="modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 燈箱:破關證明 completeDownload -->
+    <div class="modal fade" id="completeDownload" tabindex="-1" aria-labelledby="completeDownloadLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn text-end p-0" data-bs-dismiss="modal" aria-label="Close"><img src="images/ic_close.svg" alt=""></button>
+                <div class="text-center">
+                    <div class="font125 mb-3">恭喜主線全數破關！</div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/img_complete.png" class="mb-3 img-fluid" alt="">
+                                <div class="user">王大明</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_complete_all.png" class="mb-3 img-fluid" alt="">
+                                <div class="user">王大明</div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                        <button class="btn btn-pink-outline w-100 me-1 text-center">儲存圖片</button>
+                        <button class="btn btn-pink w-100 ms-1">分享<img src="images/ic_share.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</body>
+</html>

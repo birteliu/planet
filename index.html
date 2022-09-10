@@ -4,13 +4,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MOPCON 大地遊戲</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1 class="">Hello, world!</h1>
+    <!-- Title Bar -->
+    <div class="container-fluid title-bar">
+        <div class="row">
+            <div class="col-auto bar-icon">
+            </div>
+            <div class="col">
+                <div class="title">大地遊戲</div>
+            </div>
+            <div class="col-auto bar-icon" onclick="location.href='05_introduction.html';">
+                <button class="btn"><img src="images/ic_help.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 星球上方 Bar -->
+    <div class="container planet-top">
+        <div class="row">
+            <div class="col-auto d-flex align-items-center">
+                <div class="now-point">
+                    <img src="images/ic_diamond.svg" class="me-2" alt="">
+                    <span>6000 pt</span>
+                </div>
+            </div>
+            <div class="col text-end">
+                <button class="btn py-1 px-2" onclick="location.href='04_leaderboard.html';"><img src="images/ic_ranking.svg" alt=""></button>
+                <button class="btn py-1 px-2" onclick="location.href='03_award.html';"><img src="images/ic_gift.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 星球 -->
+    <div class="main-planet">
+        <div class="planet-row">
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#planetHint"><img src="images/planet/planet_black_01.svg" alt=""></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#scanSuccess"><img src="images/planet/planet_02.svg" alt=""></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#planetReceived"><img src="images/planet/planet_03.svg" alt=""></button>
+        </div>
+        <div class="planet-row">
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#completeDownload"><img src="images/planet/planet_black_04.svg" alt=""></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_05.svg" alt=""></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_06.svg" alt=""></button>
+        </div>
+        <div class="planet-row">
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_07.svg" alt=""></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_08.svg" alt=""></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_09.svg" alt=""></button>
+        </div>
+        <div class="planet-row">
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_10.svg" alt=""></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_11.svg" alt=""></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_12.svg" alt=""></button>
+        </div>
+        <div class="planet-row">
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_13.svg" alt=""></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_14.svg" alt=""></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#"><img src="images/planet/planet_black_15.svg" alt=""></button>
+        </div>
+    </div>
+
+    <!-- 相機按鈕 -->
+    <div class="scan-planet">
+        <button class="btn"><img src="images/btn_scan.svg" alt=""></button>
+    </div>
+
+    <!-- 燈箱:星球提示 plantHint -->
+    <div class="modal fade" id="planetHint" tabindex="-1" aria-labelledby="planetHintLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn text-end p-0" data-bs-dismiss="modal"><img src="images/ic_close.svg" alt=""></button>
+                <div class="text-center">
+                    <div class="font175 mb-3">我是誰</div>
+                    <img src="images/planet/planet_black_01.svg" class="mb-3" alt="">
+                    <div>星球介紹文案五十字內星球介紹文案五十字內星球介紹文案五十字內星球介紹文案五十字內星球介紹文案五十字內</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 燈箱:任務達成 scanSuccess -->
+    <div class="modal fade" id="scanSuccess" tabindex="-1" aria-labelledby="scanSuccessLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn text-end p-0" data-bs-dismiss="modal"><img src="images/ic_close.svg" alt=""></button>
+                <div class="text-center">
+                    <div class="font175 mb-3">任務達成</div>
+                    <!-- 星球 -->
+                    <img src="images/planet/planet_02.svg" class="mb-3" alt="">
+                    <!-- 支線行動 -->
+                    <!-- <img src="images/img_help2.svg" class="mb-3" alt=""> -->
+                    <!-- 星點觀察 -->
+                    <!-- <img src="images/img_help3.svg" class="mb-3" alt=""> -->
+                    <div>恭喜獲得 2000 pt！</div>
+                    <button class="btn btn-pink mt-3 px-5"  data-bs-dismiss="modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 燈箱:分數已領取 planetReceived -->
+    <div class="modal fade" id="planetReceived" tabindex="-1" aria-labelledby="planetReceivedLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn text-end p-0" data-bs-dismiss="modal" aria-label="Close"><img src="images/ic_close.svg" alt=""></button>
+                <div class="text-center">
+                    <div class="font175 mb-3">分數已領取</div>
+                    <div>恭這個分數已領取，去其他星球探索吧！</div>
+                    <button class="btn btn-pink mt-3 px-5" data-bs-dismiss="modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 燈箱:破關證明 completeDownload -->
+    <div class="modal fade" id="completeDownload" tabindex="-1" aria-labelledby="completeDownloadLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn text-end p-0" data-bs-dismiss="modal" aria-label="Close"><img src="images/ic_close.svg" alt=""></button>
+                <div class="text-center">
+                    <div class="font125 mb-3">恭喜主線全數破關！</div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/img_complete.png" class="mb-3 img-fluid" alt="">
+                                <div class="user">王大明</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_complete_all.png" class="mb-3 img-fluid" alt="">
+                                <div class="user">王大明</div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                        <button class="btn btn-pink-outline w-100 me-1 text-center">儲存圖片</button>
+                        <button class="btn btn-pink w-100 ms-1">分享<img src="images/ic_share.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </body>
 </html>

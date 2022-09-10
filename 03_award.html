@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOPCON 大地遊戲</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Title Bar -->
+    <div class="container-fluid title-bar">
+        <div class="row">
+            <div class="col-auto bar-icon">
+                <button class="btn" onclick="location.href='index.html';"><img src="images/ic_back.svg" alt=""></button>
+            </div>
+            <div class="col">
+                <div class="title">兌換獎品</div>
+            </div>
+            <div class="col-auto bar-icon">
+            </div>
+        </div>
+    </div>
+    
+    <!-- 進度條 -->
+    <img src="images/img_progress.svg" class="mb-3 progress-img" alt="">
+
+    <!-- 兌換按鈕 -->
+    <div class="p-3">
+        <button class="btn btn-voucher">
+            <div class="gift"><img src="images/ic_gift_unfinish.svg" alt=""></div>
+            <div class="award-text flex-grow-1">
+                <span class="font125 fw-bold d-block">小獎勵</span>
+                <span>完成 16 顆星球探索即可兌換</span>
+            </div>
+            <div class="state">未<br>達<br>標</div>
+        </button>
+        <button class="btn btn-voucher vocher-reach" data-bs-toggle="modal" data-bs-target="#exchange">
+            <div class="gift"><img src="images/ic_gift.svg" alt=""></div>
+            <div class="award-text flex-grow-1">
+                <span class="font125 fw-bold d-block">霜淇淋 x 1</span>
+                <span>至三樓服務台兌換至三樓服務台兌換至三樓服務台兌換</span>
+            </div>
+            <div class="state">兌<br>換</div>
+        </button>
+        <button class="btn btn-voucher vocher-reach" data-bs-toggle="modal" data-bs-target="#tablecloth">
+            <div class="gift"><img src="images/ic_gift.svg" alt=""></div>
+            <div class="award-text flex-grow-1">
+                <span class="font125 fw-bold d-block">Mo 娘桌布 x 1</span>
+                <span>完成 10 顆星球探索即可兌換</span>
+            </div>
+            <div class="state">兌<br>換</div>
+        </button>
+        <button class="btn btn-voucher vocher-finished">
+            <div class="gift"><img src="images/ic_gift_finished.svg" alt=""></div>
+            <div class="award-text flex-grow-1">
+                <span class="font125 fw-bold d-block">咖啡 x 1</span>
+                <span>完成 16 顆星球探索即可兌換顆星球探索即可兌換</span>
+            </div>
+            <img src="images/gift_done.svg" class="img-finished" alt="">
+        </button>
+        <button class="btn btn-voucher vocher-finished">
+            <div class="gift"><img src="images/ic_gift_finished.svg" alt=""></div>
+            <div class="award-text flex-grow-1">
+                <span class="font125 fw-bold d-block">咖啡 x 1</span>
+                <span>完成 16 顆星球探索即可兌換顆星球探索即可兌換</span>
+            </div>
+            <img src="images/gift_done.svg" class="img-finished" alt="">
+        </button>
+    </div>
+
+    <!-- 燈箱:代碼兌換 exchange -->
+    <div class="modal fade" id="exchange" tabindex="-1" aria-labelledby="exchangeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn text-end p-0" data-bs-dismiss="modal"><img src="images/ic_close.svg" alt=""></button>
+                <div class="text-center">
+                    <div class="font175 mb-3">確認兌換</div>
+                    <input class="form-control form-control-lg exchange-input" type="text" placeholder="請輸入兌換碼" aria-label="">
+                    <button class="btn btn-pink mt-4 px-5" data-bs-target="#exchangeSuccess" data-bs-toggle="modal">兌換</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exchangeSuccess" aria-hidden="true" aria-labelledby="exchangeSuccessLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn text-end p-0" data-bs-dismiss="modal"><img src="images/ic_close.svg" alt=""></button>
+                <div class="text-center">
+                    <div class="font175 mb-3">兌換成功</div>
+                    <div>恭喜成功兌換霜淇淋一個</div>
+                    <button class="btn btn-pink mt-4 px-5" data-bs-dismiss="modal">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 燈箱:桌布兌換 tablecloth -->
+    <div class="modal fade" id="tablecloth" tabindex="-1" aria-labelledby="tableclothLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn text-end p-0" data-bs-dismiss="modal" aria-label="Close"><img src="images/ic_close.svg" alt=""></button>
+                <div class="text-center">
+                    <div class="font125 mb-3">兌換成功</div>
+                    <div class="mb-3">恭喜成功兌換 Mo 孃手機桌布</div>
+                    <img src="images/gift_tablecloth_preview.png" class="img-fluid" alt="">
+                    <button class="btn btn-pink mt-4 px-5">儲存圖片</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
+</body>
+</html>
