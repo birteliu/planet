@@ -168,6 +168,7 @@ body {
     text-align: center;
     color: white;
     position: relative;
+    height: calc(100vh - 56px);
     .img-planet {
         position: absolute;
         width: 180px;
