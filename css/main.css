@@ -12,6 +12,10 @@
   color: #51A3D3;
 }
 
+.mainpink100 {
+  color: #FF99A6;
+}
+
 .btn-pink {
   color: #fff;
   background-color: #FF7987;
@@ -140,6 +144,76 @@ body {
   padding: 0;
 }
 
+.planet-row {
+  -webkit-animation: ani-planet 2s infinite;
+          animation: ani-planet 2s infinite;
+}
+
+.planet-row:nth-child(n) .btn:nth-child(3n) {
+  -webkit-animation: ani-planet 4s infinite;
+          animation: ani-planet 4s infinite;
+}
+
+.planet-row:nth-child(n) .btn:nth-child(3n+2) {
+  -webkit-animation: ani-planet 1s infinite;
+          animation: ani-planet 1s infinite;
+}
+
+.planet-row:nth-child(2n) .btn:nth-child(3n) {
+  -webkit-animation: ani-planet 3s infinite;
+          animation: ani-planet 3s infinite;
+}
+
+.planet-row:nth-child(2n) .btn:nth-child(3n+2) {
+  -webkit-animation: ani-planet 4s infinite;
+          animation: ani-planet 4s infinite;
+}
+
+.planet-row:nth-child(3n) .btn:nth-child(3n) {
+  -webkit-animation: ani-planet 1s infinite;
+          animation: ani-planet 1s infinite;
+}
+
+.planet-row:nth-child(3n) .btn:nth-child(3n+1) {
+  -webkit-animation: ani-planet 3s infinite;
+          animation: ani-planet 3s infinite;
+}
+
+.planet-row:nth-child(3n) .btn:nth-child(3n+2) {
+  -webkit-animation: ani-planet 4s infinite;
+          animation: ani-planet 4s infinite;
+}
+
+@-webkit-keyframes ani-planet {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-2.5px);
+            transform: translateY(-2.5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes ani-planet {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-2.5px);
+            transform: translateY(-2.5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 .scan-planet {
   width: 100%;
   text-align: center;
@@ -153,9 +227,9 @@ body {
   margin: auto;
   border-radius: 20px;
   border: 1px solid #51A3D3;
-  background-color: rgba(0, 73, 115, 0.9);
+  background-color: rgba(2, 43, 66, 0.9);
   color: white;
-  padding: 1rem 1.5rem 1.75rem 1.5rem;
+  padding: 1rem 1.5rem 2.75rem 1.5rem;
 }
 
 .modal-content .swiper-container {
@@ -225,7 +299,7 @@ body {
 }
 
 .swiper-container .loading {
-  width: 60%;
+  width: 50%;
   margin-bottom: 1rem;
 }
 
@@ -301,8 +375,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top-right-radius: 9px;
-  border-bottom-right-radius: 9px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .btn-voucher.vocher-reach, .btn-voucher.vocher-reach:hover, .btn-vocher:hover.vocher-reach, .btn-vocher:hover.vocher-reach:hover, .btn-voucher:active.vocher-reach, .btn-voucher:active.vocher-reach:hover, .btn-voucher:focus.vocher-reach, .btn-voucher:focus.vocher-reach:hover {
@@ -394,22 +468,26 @@ body {
   color: white;
 }
 
-.leaderboard table tbody tr {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(81, 163, 211, 0.5)), to(rgba(81, 163, 211, 0)));
-  background: linear-gradient(90deg, rgba(81, 163, 211, 0.5) 0%, rgba(81, 163, 211, 0) 100%);
-}
-
-.leaderboard table tbody tr.me {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 121, 135, 0.5)), to(rgba(255, 121, 135, 0)));
-  background: linear-gradient(90deg, rgba(255, 121, 135, 0.5) 0%, rgba(255, 121, 135, 0) 100%);
-}
-
 .leaderboard table tbody tr.me th {
   border-left: 2px solid #FF99A6;
+  background: -webkit-gradient(linear, left top, right top, from(#7F596E), to(#665369));
+  background: linear-gradient(90deg, #7F596E 0%, #665369 100%);
+}
+
+.leaderboard table tbody tr.me td:nth-child(2) {
+  background: -webkit-gradient(linear, left top, right top, from(#665369), to(#073B56));
+  background: linear-gradient(90deg, #665369 0%, #073B56 100%);
+}
+
+.leaderboard table tbody tr.me td:nth-child(3) {
+  background: -webkit-gradient(linear, left top, right top, from(#073B56), to(#023A55));
+  background: linear-gradient(90deg, #073B56 0%, #023A55 100%);
 }
 
 .leaderboard table tbody tr th {
   border-left: 2px solid #51A3D3;
+  background: -webkit-gradient(linear, left top, right top, from(#296E94), to(#226487));
+  background: linear-gradient(90deg, #296E94 0%, #226487 100%);
 }
 
 .leaderboard table tbody tr th, .leaderboard table tbody tr td {
@@ -425,6 +503,16 @@ body {
   top: -4px;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
+}
+
+.leaderboard table tbody tr td:nth-child(2) {
+  background: -webkit-gradient(linear, left top, right top, from(#226589), to(#043C58));
+  background: linear-gradient(90deg, #226589 0%, #043C58 100%);
+}
+
+.leaderboard table tbody tr td:nth-child(3) {
+  background: -webkit-gradient(linear, left top, right top, from(#043C58), to(#023A55));
+  background: linear-gradient(90deg, #043C58 0%, #023A55 100%);
 }
 
 .leaderboard table tbody tr .line {
@@ -460,19 +548,26 @@ body {
   color: white;
 }
 
-.my-score table tbody tr {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 121, 135, 0.5)), to(rgba(255, 121, 135, 0)));
-  background: linear-gradient(90deg, rgba(255, 121, 135, 0.5) 0%, rgba(255, 121, 135, 0) 100%);
-}
-
 .my-score table tbody tr th {
   border-left: 2px solid #FF99A6;
+  background: -webkit-gradient(linear, left top, right top, from(#935967), to(#895564));
+  background: linear-gradient(90deg, #935967 0%, #895564 100%);
 }
 
 .my-score table tbody tr th, .my-score table tbody tr td {
   padding-top: .25rem;
   padding-bottom: .25rem;
   border-bottom: 0;
+}
+
+.my-score table tbody tr td:nth-child(2) {
+  background: -webkit-gradient(linear, left top, right top, from(#895564), to(#363249));
+  background: linear-gradient(90deg, #895564 0%, #363249 100%);
+}
+
+.my-score table tbody tr td:nth-child(3) {
+  background: -webkit-gradient(linear, left top, right top, from(#363249), to(#393246));
+  background: linear-gradient(90deg, #363249 0%, #393246 100%);
 }
 
 .my-score table tbody tr .line {

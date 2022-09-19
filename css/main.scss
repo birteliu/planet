@@ -23,6 +23,10 @@ $mainPink400: #BB0031;
     color: $mainBlue100;
 }
 
+.mainpink100 {
+    color: $mainPink100;
+}
+
 // mixin
 @mixin flex_center {
     display: flex;
@@ -131,6 +135,56 @@ body {
         }
     }
 }
+
+.planet-row {
+    animation: ani-planet 2s infinite;
+    &:nth-child(n) {
+        .btn {
+            &:nth-child(3n) {
+                animation: ani-planet 4s infinite;
+            }
+            &:nth-child(3n+2) {
+                animation: ani-planet 1s infinite;
+            }
+        }
+    }
+    &:nth-child(2n) {
+        .btn {
+            &:nth-child(3n) {
+                animation: ani-planet 3s infinite;
+            }
+            &:nth-child(3n+2) {
+                animation: ani-planet 4s infinite;
+            }
+        }
+    }
+    &:nth-child(3n) {
+        .btn {
+            &:nth-child(3n) {
+                animation: ani-planet 1s infinite;
+            }
+            &:nth-child(3n+1) {
+                animation: ani-planet 3s infinite;
+            }
+            &:nth-child(3n+2) {
+                animation: ani-planet 4s infinite;
+            }
+        }
+    }
+}
+
+@keyframes ani-planet {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-2.5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+}
+
 .scan-planet {
     width: 100%;
     text-align: center;
@@ -143,9 +197,9 @@ body {
     margin: auto;
     border-radius: 20px;
     border: 1px solid $mainBlue100;
-    background-color: rgba(0, 73, 115, 0.9);
+    background-color: rgba(2, 43, 66, 0.9);
     color: white;
-    padding: 1rem 1.5rem 1.75rem 1.5rem;
+    padding: 1rem 1.5rem 2.75rem 1.5rem;
     .swiper-container {
         position: relative;
         .user {
@@ -190,7 +244,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     .loading {
-        width: 60%;
+        width: 50%;
         margin-bottom: 1rem;
     }
     .introduce {
@@ -247,8 +301,8 @@ body {
         border-left: 2px dashed #A5A5A5;
         display: flex;
         align-items: center;
-        border-top-right-radius: 9px;
-        border-bottom-right-radius: 9px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
     }
     &.vocher-reach, &.vocher-reach:hover {
         border-color: $mainPink200!important;
@@ -313,15 +367,23 @@ body {
         tbody {
             color: white;
             tr {
-                background: linear-gradient(90deg, rgba(81, 163, 211, 0.5) 0%, rgba(81, 163, 211, 0) 100%);
                 &.me {
-                    background: linear-gradient(90deg, rgba(255, 121, 135, 0.5) 0%, rgba(255, 121, 135, 0) 100%);
                     th {
                         border-left: 2px solid $mainPink100;
+                        background: linear-gradient(90deg, #7F596E 0%, #665369 100%);
+                    }
+                    td {
+                        &:nth-child(2) {
+                            background: linear-gradient(90deg, #665369 0%, #073B56 100%);                               
+                        }
+                        &:nth-child(3) {
+                            background: linear-gradient(90deg, #073B56 0%, #023A55 100%);
+                        }
                     }
                 }
                 th {
                     border-left: 2px solid $mainBlue100;
+                    background: linear-gradient(90deg, #296E94 0%, #226487 100%);
                 }
                 th, td {
                     border-bottom: 3px solid #163953;
@@ -333,6 +395,14 @@ body {
                         right: 0;
                         top: -4px;
                         transform: rotate(20deg);
+                    }
+                }
+                td {
+                    &:nth-child(2) {
+                        background: linear-gradient(90deg, #226589 0%, #043C58 100%);
+                    }
+                    &:nth-child(3) {
+                        background: linear-gradient(90deg, #043C58 0%, #023A55 100%);
                     }
                 }
                 .line {
@@ -364,14 +434,22 @@ body {
         tbody {
             color: white;
             tr {
-                background: linear-gradient(90deg, rgba(255, 121, 135, 0.5) 0%, rgba(255, 121, 135, 0) 100%);
                 th {
                     border-left: 2px solid $mainPink100;
+                    background: linear-gradient(90deg, #935967 0%, #895564 100%);
                 }
                 th, td {
                     padding-top: .25rem;
                     padding-bottom: .25rem;
                     border-bottom: 0;
+                }
+                td {
+                    &:nth-child(2) {
+                        background: linear-gradient(90deg, #895564 0%, #363249 100%);                             
+                    }
+                    &:nth-child(3) {
+                        background: linear-gradient(90deg, #363249 0%, #393246 100%);
+                    }
                 }
                 .line {
                     padding-left: 0;
